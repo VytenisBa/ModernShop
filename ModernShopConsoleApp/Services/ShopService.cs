@@ -31,5 +31,11 @@ namespace ModernShopConsoleApp.Services
         {
             return _items;
         }
+
+        public void Remove(string name)
+        {
+            _items = _items.Where(x => x.Name != name).ToList();
+
+        }
     }
 }

@@ -26,7 +26,8 @@ namespace ModernShopConsoleApp.Services
 
             if(command.StartsWith("Remove"))
             {
-
+                string[] splitCommand = command.Split(" ");
+                _shopService.Remove(splitCommand[1]);
             }
 
             if(command.StartsWith("Show inventory"))
