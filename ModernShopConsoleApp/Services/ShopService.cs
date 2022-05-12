@@ -37,5 +37,12 @@ namespace ModernShopConsoleApp.Services
             _items = _items.Where(x => x.Name != name).ToList();
 
         }
+
+        public void Set(string name, string price, string quantity)
+        {
+            ShopItem firstShopItems = _items.First(x => x.Name == name);  //suradom itema
+            firstShopItems.Quantity = quantity;  //atnaujina quantity          
+
+        }
     }
 }

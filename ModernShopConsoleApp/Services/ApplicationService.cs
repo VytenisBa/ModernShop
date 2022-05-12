@@ -41,7 +41,8 @@ namespace ModernShopConsoleApp.Services
 
             if(command.StartsWith("Set"))
             {
-
+                string[] splitCommand = command.Split(" ");
+                _shopService.Set(splitCommand[1], splitCommand[2], splitCommand[3]);
             }
 
             if(command.StartsWith("Show Balance"))
