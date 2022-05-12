@@ -24,13 +24,16 @@ namespace ModernShopConsoleApp.Services
                 _shopService.Add(splitCommand[1], splitCommand[2], splitCommand[3]);
             }
 
-            if(command.StartsWith("Remove"))
+
+
+            else if (command.StartsWith("Remove"))
             {
                 string[] splitCommand = command.Split(" ");
                 _shopService.Remove(splitCommand[1]);
             }
 
-            if(command.StartsWith("Show inventory"))
+
+            else if (command.StartsWith("Show inventory"))
             {
                 List<ShopItem> items = _shopService.GetAll();
                 foreach (ShopItem item in items)
@@ -39,37 +42,44 @@ namespace ModernShopConsoleApp.Services
                 }
             }
 
-            if(command.StartsWith("Set"))
+            else if (command.StartsWith("Set"))
             {
                 string[] splitCommand = command.Split(" ");
                 _shopService.Set(splitCommand[1], splitCommand[2], splitCommand[3]);
             }
 
-            if(command.StartsWith("Show Balance"))
+
+            else if (command.StartsWith("Show Balance"))
             {
 
             }
 
-            if(command.StartsWith("Topup"))
+            else if (command.StartsWith("Topup"))
             {
 
             }
 
-            if(command.StartsWith("Show items"))
+            else if (command.StartsWith("Show items"))
             {
 
             }
 
-            if(command.StartsWith("Buy"))
+            else if (command.StartsWith("Buy"))
             {
 
             }
 
-            if (command.StartsWith("Exit"))
+            else if (command.StartsWith("Exit"))
             {
                 Console.WriteLine("Have a nice day!");
                 Environment.Exit(1);
             }
+
+            else
+            {
+                Console.WriteLine("Erorr");
+            }
+
         }
             
     }
