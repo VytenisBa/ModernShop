@@ -13,12 +13,12 @@ while (true)
     try
     {
         var command = Console.ReadLine();
+        command = command.ToLower();    
         applicationService.Process(command);
     }
     catch (Exception)
     {
-
-        Console.WriteLine("Erorr"); ;
+        Console.WriteLine("Sorry the command was not recognized, try again"); ;
     }
   
 }

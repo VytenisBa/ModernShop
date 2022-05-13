@@ -18,7 +18,7 @@ namespace ModernShopConsoleApp.Services
 
         public void Process(string command)
         {
-            if(command.StartsWith("Add"))
+            if(command.StartsWith("add"))
             {
                 string[] splitCommand = command.Split(" ");
                 _shopService.Add(splitCommand[1], splitCommand[2], splitCommand[3]);
@@ -26,14 +26,14 @@ namespace ModernShopConsoleApp.Services
 
 
 
-            else if (command.StartsWith("Remove"))
+            else if (command.StartsWith("remove"))
             {
                 string[] splitCommand = command.Split(" ");
                 _shopService.Remove(splitCommand[1]);
             }
 
 
-            else if (command.StartsWith("Show inventory"))
+            else if (command.StartsWith("show inventory"))
             {
                 List<ShopItem> items = _shopService.GetAll();
                 foreach (ShopItem item in items)
@@ -42,34 +42,34 @@ namespace ModernShopConsoleApp.Services
                 }
             }
 
-            else if (command.StartsWith("Set"))
+            else if (command.StartsWith("set"))
             {
                 string[] splitCommand = command.Split(" ");
                 _shopService.Set(splitCommand[1], splitCommand[2], splitCommand[3]);
             }
 
 
-            else if (command.StartsWith("Show Balance"))
+            else if (command.StartsWith("show balance"))
             {
 
             }
 
-            else if (command.StartsWith("Topup"))
+            else if (command.StartsWith("topup"))
             {
 
             }
 
-            else if (command.StartsWith("Show items"))
+            else if (command.StartsWith("show items"))
             {
 
             }
 
-            else if (command.StartsWith("Buy"))
+            else if (command.StartsWith("buy"))
             {
 
             }
 
-            else if (command.StartsWith("Exit"))
+            else if (command.StartsWith("exit"))
             {
                 Console.WriteLine("Have a nice day!");
                 Environment.Exit(1);
