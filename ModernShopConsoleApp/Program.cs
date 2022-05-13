@@ -10,7 +10,15 @@ Console.WriteLine("Options:\n Add < ShopItemName > < Price > < quantity >\n Remo
 while (true)
 {
     Console.WriteLine("Enter your command:\n");
-    var command = Console.ReadLine();
+    try
+    {
+        var command = Console.ReadLine();
+        applicationService.Process(command);
+    }
+    catch (Exception)
+    {
 
-    applicationService.Process(command);
+        Console.WriteLine("Erorr"); ;
+    }
+  
 }
