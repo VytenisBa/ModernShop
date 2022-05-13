@@ -25,7 +25,7 @@ namespace ModernShopConsoleApp.Services
                 Quantity = quantity
             };
             bool doesExst = !_items.Any(x => x.Name == name);  //ar bent vienas itemas is mano saraso jau yra? ir paverciam neiginiu '!'
-            if(doesExst)
+            if (doesExst)
                 _items.Add(item);
             else Console.WriteLine("Such item alredy exist (try 'Set' for same tipe of items)");
         }
